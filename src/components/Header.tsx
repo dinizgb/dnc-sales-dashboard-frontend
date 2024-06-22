@@ -11,7 +11,7 @@ import Container from '@mui/material/Container'
 // UTILS
 import { pxToRem } from '@/utils'
 
-export const StyledHeader = styled.header`
+const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.appBackground};
   border-bottom: ${pxToRem(1)} solid ${(props) => props.theme.appDefaultStroke};
   width: 100%;

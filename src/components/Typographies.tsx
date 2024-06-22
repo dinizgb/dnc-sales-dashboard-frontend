@@ -28,6 +28,13 @@ export const StyledP = styled.p<TypographiesProps>`
   }
 `
 
+export const StyledSpan = styled.span<TypographiesProps>`
+  color: ${(props) => props.color || props.theme.typographies.subtitle};
+  font-size: ${(props) => pxToRem(props.size || 16)};
+  font-weight: ${(props) => props.weight || 400};
+  line-height: ${(props) => pxToRem(props.lineHeight || 24)};
+`
+
 export const StyledUl = styled.ul<TypographiesProps>`
   font-size: ${(props) => pxToRem(props.size || 16)};
   font-weight: ${(props) => props.weight || 400};
