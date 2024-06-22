@@ -33,6 +33,7 @@ export const lightTheme: Theme = {
   },
   typographies: {
     error: '#FF0202',
+    subtitle: '#828282',
     success: '#008000',
   },
 }
@@ -70,6 +71,7 @@ export const darkTheme: Theme = {
   },
   typographies: {
     error: '#FF0202',
+    subtitle: '#89A7CE',
     success: '#008000',
   },
 }

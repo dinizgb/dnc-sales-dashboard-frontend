@@ -31,6 +31,7 @@ export interface Theme {
   }
   typographies: {
     error: string
+    subtitle: string
     success: string
   }
 }
