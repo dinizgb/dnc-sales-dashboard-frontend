@@ -1,6 +1,7 @@
 export interface Theme {
   appBackground: string
   appColor: string
+  appDefaultStroke: string
   appLogo: string
   buttons: {
     alert: string
