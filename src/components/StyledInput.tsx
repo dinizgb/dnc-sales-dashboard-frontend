@@ -7,7 +7,7 @@ export const StyledInput = styled.input<
   background-color: ${(props) => props.theme.textInput.active};
   color: ${(props) => props.theme.textInput.activeColor};
   border-radius: ${pxToRem(8)};
-  border: 1px solid ${(props) => props.theme.textInput.borderColor};
+  border: ${pxToRem(1)} solid ${(props) => props.theme.textInput.borderColor};
   box-sizing: border-box;
   cursor: pointer;
   height: ${pxToRem(40)};
@@ -19,7 +19,8 @@ export const StyledInput = styled.input<
 
   &:disabled {
     background-color: ${(props) => props.theme.textInput.disabled};
-    border: 1px solid ${(props) => props.theme.textInput.disabledBorderColor};
+    border: ${pxToRem(1)} solid
+      ${(props) => props.theme.textInput.disabledBorderColor};
     color: ${(props) => props.theme.textInput.disabledColor};
     cursor: not-allowed;
   }
