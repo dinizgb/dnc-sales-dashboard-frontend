@@ -1,4 +1,4 @@
-import { AvatarsList, CardComponent, Header } from '@/components'
+import { AvatarsList, CardComponent, CustomTable, Header } from '@/components'
 
 // MUI
 import Container from '@mui/material/Container'
@@ -24,6 +24,27 @@ const mockListData = [
   },
 ]
 
+const mockTableData = {
+  headers: ['Name', 'Email', 'Actions'],
+  rows: [
+    [
+      <span>John Doe</span>,
+      <span>john@example.com</span>,
+      <button>Delete</button>,
+    ],
+    [
+      <span>Jane Smith</span>,
+      <span>jane@example.com</span>,
+      <button>Delete</button>,
+    ],
+    [
+      <span>Sam Green</span>,
+      <span>sam@example.com</span>,
+      <button>Delete</button>,
+    ],
+  ],
+}
+
 function Home() {
   return (
     <>
@@ -32,6 +53,12 @@ function Home() {
       <Container maxWidth="lg">
         <CardComponent>
           <AvatarsList listData={mockListData} />
+        </CardComponent>
+        <CardComponent>
+          <CustomTable
+            headers={mockTableData.headers}
+            rows={mockTableData.rows}
+          />
         </CardComponent>
       </Container>
     </>
