@@ -55,7 +55,6 @@ function Home() {
   return (
     <>
       <Header />
-      <br />
       <Container maxWidth="lg">
         <CardComponent>
           <AvatarsList listData={mockListData} />
