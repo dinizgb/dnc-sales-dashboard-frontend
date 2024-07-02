@@ -25,7 +25,7 @@ function AvatarsList(props: AvatarsListsProps) {
           <Box>
             <Avatar
               alt={item.name}
-              src={item.avatar}
+              src={item.avatar || '/dnc-avatar.jpg'}
               sx={{
                 width: pxToRem(48),
                 height: pxToRem(48),

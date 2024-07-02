@@ -4,74 +4,242 @@ import {
   CustomChart,
   CustomTable,
   Header,
+  StyledH2,
+  StyledH3,
+  StyledSpan,
 } from '@/components'
+import { Link } from 'react-router-dom'
+
+// HOOKS
+import { useGet } from '@/hooks'
 
 // MUI
 import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
 
 // UTILS
-import { currencyConverter } from '@/utils'
+import { currencyConverter, highlightTextConverter } from '@/utils'
 
-const mockListData = [
-  {
-    avatar: '/dnc-avatar.jpg',
-    name: 'Nome Sobrenome 1',
-    subtitle: currencyConverter(1234.56),
-  },
-  {
-    avatar: '/dnc-avatar.jpg',
-    name: 'Nome Sobrenome 2',
-    subtitle: currencyConverter(1014.26),
-  },
-  {
-    avatar: '/dnc-avatar.jpg',
-    name: 'Nome Sobrenome 3',
-    subtitle: currencyConverter(934.56),
-  },
-]
-
-const mockTableData = {
-  headers: ['Name', 'Email', 'Actions'],
-  rows: [
-    [
-      <span>John Doe</span>,
-      <span>john@example.com</span>,
-      <button>Delete</button>,
-    ],
-    [
-      <span>Jane Smith</span>,
-      <span>jane@example.com</span>,
-      <button>Delete</button>,
-    ],
-    [
-      <span>Sam Green</span>,
-      <span>sam@example.com</span>,
-      <button>Delete</button>,
-    ],
-  ],
-}
+// TYPES
+import { CustomChartProps, HighlightsData, NewsData, StarsData } from '@/types'
 
 function Home() {
+  // HIGHLIGHTS
+  const {
+    data: highlightsData,
+    loading: highlightsLoading,
+    error: highlightsError,
+  } = useGet<HighlightsData[]>('sales/highlights')
+
+  // SALES PER MONTH
+  const {
+    data: salesPerMonthData,
+    loading: salesPerMonthLoading,
+    error: salesPerMonthError,
+  } = useGet<CustomChartProps>('sales/month')
+
+  // SALES STARS
+  const {
+    data: salesStarsData,
+    loading: salesStarsLoading,
+    error: salesStarsError,
+  } = useGet<StarsData[]>('sales/stars')
+
+  // NEWS
+  const {
+    data: newsData,
+    loading: newsLoading,
+    error: newsError,
+  } = useGet<NewsData[]>('news')
+
+  // YEAR
+  const {
+    data: salesYearData,
+    loading: salesYearLoading,
+    error: salesYearError,
+  } = useGet<CustomChartProps>('sales/year')
+
   return (
     <>
       <Header />
-      <Container maxWidth="lg">
-        <CardComponent>
-          <AvatarsList listData={mockListData} />
-        </CardComponent>
-        <CardComponent>
-          <CustomTable
-            headers={mockTableData.headers}
-            rows={mockTableData.rows}
-          />
-        </CardComponent>
-        <CardComponent>
-          <CustomChart
-            labels={['Jan', 'Fev', 'Mar', 'Abr']}
-            data={[1000.12, 2300.54, 943.32, 985.59]}
-            type="line"
-          />
-        </CardComponent>
+      <Container className="mb-2" maxWidth="lg">
+        <Grid container spacing={4}>
+          {!highlightsError && (
+            <>
+              <Grid item xs={12} md={4}>
+                <CardComponent
+                  className={
+                    highlightsLoading
+                      ? 'skeleton-loading skeleton-loading-mh-1'
+                      : ''
+                  }
+                >
+                  {!highlightsLoading && highlightsData && (
+                    <>
+                      <StyledH2 className="mb-1">
+                        Total de vendas no mês
+                      </StyledH2>
+                      <StyledH3 className="mb-1" size={40} lineheight={40}>
+                        {currencyConverter(highlightsData[0].value)}
+                      </StyledH3>
+                      <StyledSpan>{highlightsData[0].subtitle}</StyledSpan>
+                    </>
+                  )}
+                </CardComponent>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <CardComponent
+                  className={
+                    highlightsData
+                      ? highlightsData[1].subtitle
+                      : 'skeleton-loading skeleton-loading-mh-1'
+                  }
+                >
+                  {!highlightsLoading && highlightsData && (
+                    <>
+                      <StyledH2 className="mb-1" color="white">
+                        Meta do mês
+                      </StyledH2>
+                      <StyledH3
+                        className="mb-1"
+                        size={40}
+                        lineheight={40}
+                        color="white"
+                      >
+                        {currencyConverter(highlightsData[1].value)}
+                      </StyledH3>
+                      <StyledSpan color="white">
+                        {highlightTextConverter(highlightsData[1].subtitle)}
+                      </StyledSpan>
+                    </>
+                  )}
+                </CardComponent>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <CardComponent
+                  className={
+                    highlightsLoading
+                      ? 'skeleton-loading skeleton-loading-mh-1'
+                      : ''
+                  }
+                >
+                  {!highlightsLoading && highlightsData && (
+                    <>
+                      <Link to="/leads">
+                        <StyledH2 className="mb-1">Leads contactados</StyledH2>
+                        <StyledH3 className="mb-1" size={40} lineheight={40}>
+                          {highlightsData[2].value}
+                        </StyledH3>
+                        <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
+                      </Link>
+                    </>
+                  )}
+                </CardComponent>
+              </Grid>
+            </>
+          )}
+          <Grid item xs={12} md={7}>
+            {!salesPerMonthError && (
+              <CardComponent
+                className={
+                  salesPerMonthLoading
+                    ? 'skeleton-loading skeleton-loading-mh-2'
+                    : ''
+                }
+              >
+                {!salesPerMonthLoading && salesPerMonthData && (
+                  <>
+                    <StyledH2 className="mb-1">Valor de vendas no mês</StyledH2>
+                    <CustomChart
+                      labels={salesPerMonthData.labels.map((label) => label)}
+                      data={salesPerMonthData.data.map((data) => data)}
+                      type={salesPerMonthData.type}
+                    />
+                  </>
+                )}
+              </CardComponent>
+            )}
+          </Grid>
+          <Grid item xs={12} md={5}>
+            {!salesStarsError && (
+              <CardComponent
+                className={
+                  salesStarsLoading
+                    ? 'skeleton-loading skeleton-loading-mh-2'
+                    : ''
+                }
+              >
+                {!salesStarsLoading && salesStarsData && (
+                  <>
+                    <StyledH2 className="mb-1">
+                      Maiores vendedores no mês
+                    </StyledH2>
+                    <AvatarsList
+                      listData={salesStarsData.map((star) => ({
+                        name: star.name,
+                        subtitle: currencyConverter(star.value),
+                      }))}
+                    />
+                  </>
+                )}
+              </CardComponent>
+            )}
+          </Grid>
+          <Grid item xs={12} md={5}>
+            {!newsError && (
+              <CardComponent
+                className={
+                  newsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''
+                }
+              >
+                {!newsLoading && newsData && (
+                  <>
+                    <StyledH2 className="mb-1">Notícias relevantes</StyledH2>
+                    <CustomTable
+                      headers={['Título', 'Horário']}
+                      rows={newsData.map((news) => [
+                        <a
+                          className="ellipsis"
+                          href={news.link}
+                          target="_blank"
+                        >
+                          {news.title}
+                        </a>,
+                        <a href={news.link} target="_blank">
+                          {news.date}
+                        </a>,
+                      ])}
+                    />
+                  </>
+                )}
+              </CardComponent>
+            )}
+          </Grid>
+          <Grid item xs={12} md={7}>
+            {!salesYearError && (
+              <CardComponent
+                className={
+                  salesYearLoading
+                    ? 'skeleton-loading skeleton-loading-mh-2'
+                    : ''
+                }
+              >
+                {!salesYearLoading && salesYearData && (
+                  <>
+                    <StyledH2 className="mb-1">
+                      Valor de vendas por mês
+                    </StyledH2>
+                    <CustomChart
+                      labels={salesYearData.labels.map((label) => label)}
+                      data={salesYearData.data.map((data) => data)}
+                      type={salesYearData.type}
+                    />
+                  </>
+                )}
+              </CardComponent>
+            )}
+          </Grid>
+        </Grid>
       </Container>
     </>
   )
