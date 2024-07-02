@@ -20,4 +20,8 @@ export const CardComponent = styled.div`
     background-color: ${(props) => props.theme.card.warning};
     border-color: ${(props) => props.theme.card.warning};
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `

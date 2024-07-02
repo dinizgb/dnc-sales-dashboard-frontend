@@ -14,7 +14,7 @@ function Profile() {
   return (
     <>
       <Header />
-      <Container maxWidth="lg">
+      <Container className="mb-2" maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6}>
             <CardComponent>Seus dados...</CardComponent>

@@ -24,14 +24,14 @@ import { useFormValidation, usePost } from '@/hooks'
 import { jwtExpirationDateConverter, pxToRem } from '@/utils'
 
 // TYPES
-import { DecodedJWT, MessageProps } from '@/types'
+import { DecodedJWT, LoginResponse, MessageProps } from '@/types'
 
 function Login() {
   const inputs = [
     { type: 'email', placeholder: 'Email' },
     { type: 'password', placeholder: 'Senha' },
   ]
-  const { data, loading, error, postData } = usePost('login')
+  const { data, loading, error, postData } = usePost<LoginResponse>('login')
   const { formValues, formValid, handleChange } = useFormValidation(inputs)
   const navigate = useNavigate()
 
