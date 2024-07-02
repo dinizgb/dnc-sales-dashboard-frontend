@@ -24,14 +24,16 @@ import { useFormValidation, usePost } from '@/hooks'
 import { jwtExpirationDateConverter, pxToRem } from '@/utils'
 
 // TYPES
-import { DecodedJWT, LoginResponse, MessageProps } from '@/types'
+import { DecodedJWT, LoginData, LoginPostData, MessageProps } from '@/types'
 
 function Login() {
   const inputs = [
     { type: 'email', placeholder: 'Email' },
     { type: 'password', placeholder: 'Senha' },
   ]
-  const { data, loading, error, postData } = usePost<LoginResponse>('login')
+  const { data, loading, error, postData } = usePost<LoginData, LoginPostData>(
+    'login'
+  )
   const { formValues, formValid, handleChange } = useFormValidation(inputs)
   const navigate = useNavigate()
 
@@ -58,8 +60,8 @@ function Login() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     await postData({
-      email: formValues[0],
-      password: formValues[1],
+      email: String(formValues[0]),
+      password: String(formValues[1]),
     })
   }
 
