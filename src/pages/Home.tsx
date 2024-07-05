@@ -199,7 +199,7 @@ function Home() {
                       headers={['Título', 'Horário']}
                       rows={newsData.map((news) => [
                         <a
-                          className="ellipsis"
+                          className="ellipsis ellipsis-sm"
                           href={news.link}
                           target="_blank"
                         >
