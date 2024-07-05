@@ -39,13 +39,14 @@ function Profile() {
   } = useGet<ProfileData>('profile')
 
   const {
-    putData: profileUpdateData,
+    data: profileUpdateData,
+    putData: profilePutData,
     loading: profileUpdateLoading,
     error: profileUpdateError,
   } = usePut<ProfileEditableData>('profile/update')
 
   const { deleteData: profileDeleteData, loading: profileDeleteLoading } =
-    useDelete<null>('profile/delete')
+    useDelete('profile/delete')
 
   // FORM
   const inputs: InputProps[] = [
@@ -58,30 +59,27 @@ function Profile() {
     type: 'success',
     msg: '',
   })
+  const clearMessage = () => {
+    setTimeout(() => {
+      setUpdateMessage({
+        msg: '',
+        type: 'success',
+      })
+    }, 3000)
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await profileUpdateData({
+    await profilePutData({
       name: String(formValues[0]),
       phone: String(formValues[2]),
     })
-    if (profileUpdateError) {
-      setUpdateMessage({
-        msg: 'Não foi possível realizar a operação. Entre em contato com nosso suporte.',
-        type: 'error',
-      })
-    } else {
-      setUpdateMessage({
-        msg: 'Perfil atualizado com sucesso',
-        type: 'success',
-      })
-    }
   }
 
   const handleDelete = async () => {
     if (confirm('Tem certeza que deseja excluir sua conta?') === true) {
       try {
-        await profileDeleteData(null)
+        await profileDeleteData()
         alert('Perfil deletado com sucesso!')
         Cookies.remove('Authorization')
         window.location.href = '/'
@@ -100,6 +98,24 @@ function Profile() {
       handleChange(2, profileData.phone)
     }
   }, [profileData])
+
+  useEffect(() => {
+    if (profileUpdateData !== null) {
+      setUpdateMessage({
+        msg: 'Perfil atualizado com sucesso',
+        type: 'success',
+      })
+      clearMessage()
+    } else if (profileUpdateError) {
+      setUpdateMessage({
+        msg: 'Não foi possível realizar a operação. Entre em contato com nosso suporte.',
+        type: 'error',
+      })
+      clearMessage()
+    } else {
+      clearMessage()
+    }
+  }, [profileUpdateData, profileUpdateError])
 
   return (
     <>

@@ -31,6 +31,16 @@ export const StyledButton = styled.button<
     }
   }
 
+  &.borderless-alert {
+    background-color: none;
+    color: ${(props) => props.theme.buttons.alert};
+    height: 0;
+    padding: 0;
+    &:hover {
+      color: ${(props) => props.theme.buttons.alertHover};
+    }
+  }
+
   &:disabled {
     background-color: ${(props) => props.theme.buttons.disabled};
     color: ${(props) => props.theme.buttons.disabledColor};

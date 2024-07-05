@@ -13,15 +13,20 @@ const TableWrapper = styled.div`
     .ellipsis {
       display: block;
       white-space: nowrap;
-      width: ${pxToRem(300)};
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
+    .ellipsis-sm {
+      width: ${pxToRem(300)};
+    }
+
+    .ellipsis-xs {
+      width: ${pxToRem(150)};
+    }
+
     th,
     td {
-      border-bottom: ${pxToRem(1)} solid
-        ${(props) => props.theme.appDefaultStroke};
       height: ${pxToRem(48)};
       padding: 0 ${pxToRem(8)} 0 0;
       text-align: left;
@@ -34,6 +39,14 @@ const TableWrapper = styled.div`
     th {
       color: ${(props) => props.theme.typographies.subtitle};
       font-weight: 600;
+    }
+
+    tr {
+      border-bottom: ${pxToRem(1)} solid
+        ${(props) => props.theme.appDefaultStroke};
+      &:last-child {
+        border-bottom: none;
+      }
     }
   }
 `

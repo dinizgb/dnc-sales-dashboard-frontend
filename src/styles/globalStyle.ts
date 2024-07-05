@@ -23,16 +23,15 @@ export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
     }
 
     .skeleton-loading {
-        background-color: #eee;
-        animation: skeletonAnimation 1s infinite alternate;
+        animation: skeletonAnimation 2s infinite alternate;
     }
 
     @keyframes skeletonAnimation {
         from {
-        background-color: #eee;
+        background-color: ${(props) => props.theme.appSkeletonFrom};
         }
         to {
-        background-color: #E0E0E0;
+        background-color: ${(props) => props.theme.appSkeletonTo};
         }
     }
 
