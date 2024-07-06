@@ -8,11 +8,17 @@ import { GlobalStyle } from './styles/'
 // CONTEXTS
 import { AppThemeProvider } from './contexts/AppThemeContext.tsx'
 
+// REDUX
+import { Provider } from 'react-redux'
+import store from './redux/index.ts'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <AppThemeProvider>
-      <GlobalStyle />
-      <App />
-    </AppThemeProvider>
+    <Provider store={store}>
+      <AppThemeProvider>
+        <GlobalStyle />
+        <App />
+      </AppThemeProvider>
+    </Provider>
   </React.StrictMode>
 )

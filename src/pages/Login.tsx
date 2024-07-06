@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { ChangeEvent, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { jwtDecode } from 'jwt-decode'
@@ -23,6 +24,10 @@ import { useFormValidation, usePost } from '@/hooks'
 // UTILS
 import { jwtExpirationDateConverter, pxToRem } from '@/utils'
 
+// REDUX
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux'
+
 // TYPES
 import { DecodedJWT, LoginData, LoginPostData, MessageProps } from '@/types'
 
@@ -35,12 +40,15 @@ function Login() {
     'login'
   )
   const { formValues, formValid, handleChange } = useFormValidation(inputs)
+  const { email, message } = useSelector(
+    (state: RootState) => state.createProfile
+  )
   const navigate = useNavigate()
 
   const handleMessage = (): MessageProps => {
     if (!error)
       return {
-        msg: '',
+        msg: message ?? '',
         type: 'success',
       }
     switch (error) {
@@ -74,6 +82,12 @@ function Login() {
     }
     if (Cookies.get('Authorization')) navigate('/home')
   }, [data, navigate])
+
+  useEffect(() => {
+    if (email) {
+      handleChange(0, email)
+    }
+  }, [email])
 
   return (
     <>
