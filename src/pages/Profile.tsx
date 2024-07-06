@@ -77,7 +77,11 @@ function Profile() {
   }
 
   const handleDelete = async () => {
-    if (confirm('Tem certeza que deseja excluir sua conta?') === true) {
+    if (
+      confirm(
+        'Tem certeza que deseja excluir sua conta? Se sim, certifique-se de deletar seus leads antes.'
+      ) === true
+    ) {
       try {
         await profileDeleteData()
         alert('Perfil deletado com sucesso!')
