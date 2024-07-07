@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component Dark Theme should match the snapshot 1`] = `
+.c0 {
+  background-color: #060B26;
+  border-bottom: 0.0625rem solid #21497D;
+  margin-bottom: 2.3125rem;
+  width: 100%;
+}
+
+.c1 {
+  background-image: url(/dnc-logo-white.svg);
+  background-size: cover;
+  height: 1.875rem;
+  width: 4.5625rem;
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+    >
+      <div
+        class="MuiBox-root css-alor41"
+      >
+        <a
+          href="/home"
+        >
+          <figure
+            class="c1"
+            height="30"
+            width="73"
+          />
+        </a>
+        <a
+          href="/perfil"
+        >
+          <div
+            class="MuiAvatar-root MuiAvatar-circular css-rk6u8x-MuiAvatar-root"
+          >
+            <img
+              alt="DNC Avatar"
+              class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+              src="/dnc-avatar.jpg"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header Component Light Theme should match the snapshot 1`] = `
+.c0 {
+  background-color: #FFF;
+  border-bottom: 0.0625rem solid #E0E0E0;
+  margin-bottom: 2.3125rem;
+  width: 100%;
+}
+
+.c1 {
+  background-image: url(/dnc-logo-black.svg);
+  background-size: cover;
+  height: 1.875rem;
+  width: 4.5625rem;
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+    >
+      <div
+        class="MuiBox-root css-alor41"
+      >
+        <a
+          href="/home"
+        >
+          <figure
+            class="c1"
+            height="30"
+            width="73"
+          />
+        </a>
+        <a
+          href="/perfil"
+        >
+          <div
+            class="MuiAvatar-root MuiAvatar-circular css-rk6u8x-MuiAvatar-root"
+          >
+            <img
+              alt="DNC Avatar"
+              class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+              src="/dnc-avatar.jpg"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;

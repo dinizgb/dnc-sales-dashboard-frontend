@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarsList Component Dark Theme should match the snapshot 1`] = `
+.c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.c1 {
+  color: #89A7CE;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+<div>
+  <div
+    class="MuiBox-root css-1shl023"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-1bt7igf-MuiAvatar-root"
+      >
+        <img
+          alt="Nome Sobrenome 1"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="/dnc-avatar.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h2
+        class="c0"
+      >
+        Nome Sobrenome 1
+      </h2>
+      <span
+        class="c1"
+      >
+        R$ 1.000,00
+      </span>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1shl023"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-1bt7igf-MuiAvatar-root"
+      >
+        <img
+          alt="Nome Sobrenome 2"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="/dnc-avatar.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h2
+        class="c0"
+      >
+        Nome Sobrenome 2
+      </h2>
+      <span
+        class="c1"
+      >
+        R$ 1.000,00
+      </span>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1shl023"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-1bt7igf-MuiAvatar-root"
+      >
+        <img
+          alt="Nome Sobrenome 3"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="/dnc-avatar.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h2
+        class="c0"
+      >
+        Nome Sobrenome 3
+      </h2>
+      <span
+        class="c1"
+      >
+        R$ 1.000,00
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AvatarsList Component Light Theme should match the snapshot 1`] = `
+.c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.c1 {
+  color: #828282;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+<div>
+  <div
+    class="MuiBox-root css-1shl023"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-1bt7igf-MuiAvatar-root"
+      >
+        <img
+          alt="Nome Sobrenome 1"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="/dnc-avatar.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h2
+        class="c0"
+      >
+        Nome Sobrenome 1
+      </h2>
+      <span
+        class="c1"
+      >
+        R$ 1.000,00
+      </span>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1shl023"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-1bt7igf-MuiAvatar-root"
+      >
+        <img
+          alt="Nome Sobrenome 2"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="/dnc-avatar.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h2
+        class="c0"
+      >
+        Nome Sobrenome 2
+      </h2>
+      <span
+        class="c1"
+      >
+        R$ 1.000,00
+      </span>
+    </div>
+  </div>
+  <div
+    class="MuiBox-root css-1shl023"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circular css-1bt7igf-MuiAvatar-root"
+      >
+        <img
+          alt="Nome Sobrenome 3"
+          class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+          src="/dnc-avatar.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h2
+        class="c0"
+      >
+        Nome Sobrenome 3
+      </h2>
+      <span
+        class="c1"
+      >
+        R$ 1.000,00
+      </span>
+    </div>
+  </div>
+</div>
+`;

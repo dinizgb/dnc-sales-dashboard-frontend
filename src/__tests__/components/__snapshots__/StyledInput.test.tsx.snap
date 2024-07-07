@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledInput Component Dark Theme should match snapshot 1`] = `
+<DocumentFragment>
+  .c0 {
+  background-color: #0F1535;
+  color: #FFF;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #21497D;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.c0:disabled {
+  background-color: #282D49;
+  border: 0.0625rem solid #2E3F55;
+  color: #58677C;
+  cursor: not-allowed;
+}
+
+.c0::placeholder {
+  color: #89A7CE;
+}
+
+<input
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`StyledInput Component Light Theme should match snapshot 1`] = `
+<DocumentFragment>
+  .c0 {
+  background-color: #FFF;
+  color: #000;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #E0E0E0;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.c0:disabled {
+  background-color: #EEE;
+  border: 0.0625rem solid #E0E0E0;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.c0::placeholder {
+  color: #666;
+}
+
+<input
+    class="c0"
+  />
+</DocumentFragment>
+`;
