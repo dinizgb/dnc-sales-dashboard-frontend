@@ -1,0 +1,469 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typographies Component Dark Theme should match the snapshot - H1 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.0625rem;
+  line-height: 2.25rem;
+}
+
+<h1
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - H1 with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  letter-spacing: -0.0625rem;
+  line-height: 2.5rem;
+}
+
+<h1
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - H2 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+<h2
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - H2 with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+<h2
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - H3 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+<h2
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - H3 with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+<h2
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - P 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.c0.error {
+  color: #FF0202;
+}
+
+.c0.success {
+  color: #008000;
+}
+
+<p
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - P with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+.c0.error {
+  color: #FF0202;
+}
+
+.c0.success {
+  color: #008000;
+}
+
+<p
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - Span 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: #89A7CE;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+<span
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - Span with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+<span
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - UL 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  list-style-position: inside;
+}
+
+.c0 li {
+  list-style-position: outside;
+  margin-left: 0.9375rem;
+}
+
+<ul
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Dark Theme should match the snapshot - UL with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  list-style-position: inside;
+}
+
+.c0 li {
+  list-style-position: outside;
+  margin-left: 0.9375rem;
+}
+
+<ul
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - H1 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.0625rem;
+  line-height: 2.25rem;
+}
+
+<h1
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - H1 with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  letter-spacing: -0.0625rem;
+  line-height: 2.5rem;
+}
+
+<h1
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - H2 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+<h2
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - H2 with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+<h2
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - H3 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+<h2
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - H3 with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+<h2
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - P 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.c0.error {
+  color: #FF0202;
+}
+
+.c0.success {
+  color: #008000;
+}
+
+<p
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - P with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+.c0.error {
+  color: #FF0202;
+}
+
+.c0.success {
+  color: #008000;
+}
+
+<p
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - Span 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: #828282;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+<span
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - Span with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+<span
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - UL 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  list-style-position: inside;
+}
+
+.c0 li {
+  list-style-position: outside;
+  margin-left: 0.9375rem;
+}
+
+<ul
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Typographies Component Light Theme should match the snapshot - UL with custom props 1`] = `
+<DocumentFragment>
+  .c0 {
+  color: green;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  list-style-position: inside;
+}
+
+.c0 li {
+  list-style-position: outside;
+  margin-left: 0.9375rem;
+}
+
+<ul
+    class="c0"
+    color="green"
+    lineheight="40"
+    size="35"
+    weight="600"
+  />
+</DocumentFragment>
+`;

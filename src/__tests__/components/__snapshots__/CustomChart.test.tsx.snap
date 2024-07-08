@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom chart Component Dark Theme should match the snapshot - bar chart 1`] = `
+<div>
+  <canvas
+    height="150"
+    role="img"
+    width="300"
+  />
+</div>
+`;
+
+exports[`Custom chart Component Dark Theme should match the snapshot - line chart 1`] = `
+<div>
+  <canvas
+    height="150"
+    role="img"
+    width="300"
+  />
+</div>
+`;
+
+exports[`Custom chart Component Light Theme should match the snapshot - bar chart 1`] = `
+<div>
+  <canvas
+    height="150"
+    role="img"
+    width="300"
+  />
+</div>
+`;
+
+exports[`Custom chart Component Light Theme should match the snapshot - line chart 1`] = `
+<div>
+  <canvas
+    height="150"
+    role="img"
+    width="300"
+  />
+</div>
+`;
