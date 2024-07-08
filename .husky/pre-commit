@@ -1,11 +1,3 @@
-#!/usr/bin/env sh
-. "${0%/*}/h"
-
 echo 'Commit test init...'
 
-# Running Prettier standards
-npm run format ||
-(
-    echo 'Write Prettier errors found.';
-    false;
-)
+npm test
