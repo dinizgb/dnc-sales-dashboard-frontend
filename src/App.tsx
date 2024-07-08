@@ -25,7 +25,6 @@ function App() {
         <Route path="/cadastro" element={<Registration />} />
         <Route element={<ProtectedRoute />}>
           <Route path="home" element={<Home />} />
-          <Route path="/home" element={<Home />} />
           <Route path="/leads" element={<Leads />} />
           <Route path="/perfil" element={<Profile />} />
         </Route>
