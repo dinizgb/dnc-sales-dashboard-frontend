@@ -12,7 +12,7 @@
     "test": "jest --coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
