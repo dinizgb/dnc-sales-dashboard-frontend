@@ -3,7 +3,7 @@ import { FormComponentProps } from '@/types'
 import { StyledButton, StyledInput, StyledP } from '@/components'
 import { pxToRem } from '@/utils'
 
-const StyledForm = styled.div`
+const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: ${pxToRem(16)};

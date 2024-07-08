@@ -73,6 +73,7 @@ function Home() {
                       ? 'skeleton-loading skeleton-loading-mh-1'
                       : ''
                   }
+                  id="total-sales"
                 >
                   {!highlightsLoading && highlightsData && (
                     <>
@@ -94,6 +95,7 @@ function Home() {
                       ? highlightsData[1].subtitle
                       : 'skeleton-loading skeleton-loading-mh-1'
                   }
+                  id="month-goal"
                 >
                   {!highlightsLoading && highlightsData && (
                     <>
@@ -122,6 +124,7 @@ function Home() {
                       ? 'skeleton-loading skeleton-loading-mh-1'
                       : ''
                   }
+                  id="total-leads"
                 >
                   {!highlightsLoading && highlightsData && (
                     <>
@@ -146,6 +149,7 @@ function Home() {
                     ? 'skeleton-loading skeleton-loading-mh-2'
                     : ''
                 }
+                id="month-sales-chart"
               >
                 {!salesPerMonthLoading && salesPerMonthData && (
                   <>
@@ -168,6 +172,7 @@ function Home() {
                     ? 'skeleton-loading skeleton-loading-mh-2'
                     : ''
                 }
+                id="sales-stars"
               >
                 {!salesStarsLoading && salesStarsData && (
                   <>
@@ -191,6 +196,7 @@ function Home() {
                 className={
                   newsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''
                 }
+                id="news"
               >
                 {!newsLoading && newsData && (
                   <>
@@ -223,6 +229,7 @@ function Home() {
                     ? 'skeleton-loading skeleton-loading-mh-2'
                     : ''
                 }
+                id="year-sales-chart"
               >
                 {!salesYearLoading && salesYearData && (
                   <>
