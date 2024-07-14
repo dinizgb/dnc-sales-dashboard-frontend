@@ -78,6 +78,7 @@ function Login() {
       const decoded: DecodedJWT = jwtDecode(data?.jwt_token)
       Cookies.set('Authorization', data?.jwt_token, {
         expires: jwtExpirationDateConverter(decoded.exp),
+        secure: true,
       })
     }
     if (Cookies.get('Authorization')) navigate('/home')
